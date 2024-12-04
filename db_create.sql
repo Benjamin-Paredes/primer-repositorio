@@ -21,3 +21,7 @@ CREATE TABLE IF NOT EXISTS PER_PROY(
 	FOREIGN KEY(rut) REFERENCES PERSONAL(rut)
 	
 );
+CREATE TABLE IF NOT EXISTS CIUDAD(
+	id_ciudad serial,
+	nombre varchar(10)
+);

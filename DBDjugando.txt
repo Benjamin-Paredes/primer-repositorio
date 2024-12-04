@@ -1,0 +1,33 @@
+SELECT *FROM EMPLEADO;
+/*
+INSERT:inserta o agrega nuevos registros a la tabla
+UPDATE : Actualiza o modifica los datos que ya existen 
+DELETE : esta sentencioa borra el contenido de una tabla
+SELECT: trae información de la base de datos*/
+/*INSERT INTO EMPLEADO
+VALUES ('Ricardo','Roca','Flores','653298653','1962-12-30','Los jarales, 47','H','37000','653298653','4');
+/*otra forma*/
+INSERT INTO EMPLEADO(Nombre,Apellido2,Dno,Dni)
+VALUES ('Manuel','Paredes','4','234567899');
+//*******************************************//
+SELECT *FROM PROYECTO;
+update PROYECTO
+SET UbicacionProyecto = 'Valencia',NumDptoProyecto = 5
+WHERE NumProyecto = 10;
+/*Cambia o actualiza los valores de ubicacion proyecto a valencia y numdeptoproyecto a 5
+SET = COLOCAR 
+WHERE = DONDE se hace el cambio NumProyecto  = 10*/
+//**************************************************//
+SELECT * FROM EMPLEADO ;//LO mismo pero usando la llave foranea con IN
+UPDATE EMPLEADO
+SET Sueldo = Sueldo*1.1 
+WHERE Dno IN ( SELECT numerodpto
+              FROM DEPARTAMENTO 
+              WHERE NombreDpto ='Investigación');
+//***************************************************//
+SELECT FechaNac,Direccion
+FROM EMPLEADO
+WHERE Nombre = 'José' AND Apellido1 = 'Pérez' and  Apellido2 = 'Pérez';
+/*Seleccionamos fechanac y direccion osea select es como proyeccion luego 
+FROM EMPLEADO ya que obtenemos los datos de la tabla empleados  
+WHERE Aqui ponemos las condiciones lo que conociamos como seleccion*/ 
