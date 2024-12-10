@@ -25,3 +25,7 @@ CREATE TABLE IF NOT EXISTS CIUDAD(
 	id_ciudad serial,
 	nombre varchar(10)
 );
+CREATE TABLE IF NOT EXISTS DIRECTOR (
+	id_director serial,
+	nombre varchar(15)
+);
